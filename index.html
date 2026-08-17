@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="সেরা অ্যাফিলিয়েট সাইটসমূহ">
+<title>সেরা অ্যাফিলিয়েট সাইটসমূহ</title>
+<style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#05070d;color:#fff;font-family:"Noto Sans Bengali","Noto Sans",Arial,sans-serif}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:
+radial-gradient(circle at 15% 10%,rgba(0,149,255,.09),transparent 28%),
+radial-gradient(circle at 85% 30%,rgba(166,0,255,.08),transparent 30%);z-index:-1}
+.wrap{max-width:1250px;margin:auto;padding:0 14px}
+header{position:relative;padding:18px 0 14px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(3,5,10,.94)}
+.head{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-icon{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(145deg,#ffcc45,#7c4d00);box-shadow:0 0 25px rgba(255,190,45,.28);font-size:27px}
+.brand h1{font-size:27px;margin:0;font-weight:900}
+.brand p{margin:2px 0 0;color:#9ba8bb;font-size:13px}
+.lang{display:flex;border:1px solid #28324a;border-radius:10px;overflow:hidden;background:#0b0f19}
+.lang button{border:0;background:transparent;color:#fff;padding:10px 17px;font-weight:800;cursor:pointer}
+.lang button.active{background:linear-gradient(135deg,#7a10d6,#a52cff);box-shadow:0 0 20px rgba(170,50,255,.25)}
+
+.slider{position:relative;margin:0 -7px;overflow:hidden;border-radius:0 0 17px 17px;background:#080c14}
+.slides{display:flex;transition:transform .65s cubic-bezier(.22,.61,.36,1);touch-action:pan-y}
+.slide{min-width:100%;line-height:0}
+.slide img{width:100%;height:auto;display:block}
+.nav{position:absolute;top:50%;transform:translateY(-50%);width:42px;height:42px;border:0;border-radius:12px;background:rgba(0,0,0,.55);color:#fff;font-size:30px;cursor:pointer;z-index:3}
+.nav:hover{background:rgba(0,0,0,.78)}
+.prev{left:14px}.next{right:14px}
+.dots{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);display:flex;gap:7px;z-index:3}
+.dot{width:8px;height:8px;border:0;border-radius:10px;background:#9ca4b7;padding:0;cursor:pointer}
+.dot.active{width:24px;background:#fff}
+
+.highlights{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:20px 0}
+.highlight{border:1px solid rgba(155,70,255,.35);border-radius:13px;background:linear-gradient(145deg,#111326,#0a0d16);padding:13px;display:flex;align-items:center;gap:10px}
+.hicon{width:40px;height:40px;flex:0 0 40px;border-radius:50%;display:grid;place-items:center;background:#111d32;border:1px solid #2d76ff;font-size:19px}
+.highlight b{display:block;font-size:14px}.highlight span{color:#8994a8;font-size:11px}
+
+.title{text-align:center;margin:30px 0 22px}
+.title h2{font-size:clamp(27px,4vw,42px);margin:0;font-weight:900;background:linear-gradient(90deg,#fff2bd,#ffd04a,#fff2bd);-webkit-background-clip:text;background-clip:text;color:transparent}
+.title p{margin:7px 0 0;color:#8e99ad}
+
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}
+.card{position:relative;border-radius:17px;padding:14px 13px 13px;background:linear-gradient(150deg,#10141d,#07090e);border:1px solid var(--accent);box-shadow:0 15px 38px rgba(0,0,0,.35),0 0 20px color-mix(in srgb,var(--accent) 14%,transparent);overflow:hidden}
+.card:before{content:"";position:absolute;inset:-1px;background:linear-gradient(120deg,transparent,rgba(255,255,255,.07),transparent);transform:translateX(-110%);transition:.55s}
+.card:hover:before{transform:translateX(110%)}
+.logo-box{height:92px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(0,0,0,.3);display:flex;align-items:center;justify-content:center;margin-bottom:12px}
+.logo-box img{width:180px;height:62px;object-fit:contain;filter:drop-shadow(0 5px 10px rgba(0,0,0,.4))}
+.card h3{text-align:center;margin:0 0 4px;font-size:17px}
+.commission-label{text-align:center;color:#dce2ec;font-size:13px}
+.rate{text-align:center;font-size:42px;line-height:1;font-weight:950;margin:7px 0 12px;color:var(--accent);text-shadow:0 0 18px color-mix(in srgb,var(--accent) 35%,transparent)}
+.features{list-style:none;padding:0;margin:0 0 14px;color:#c2cad7;font-size:12px;line-height:1.8}
+.features li:before{content:"✓";display:inline-grid;place-items:center;width:17px;height:17px;margin-right:6px;border-radius:50%;background:var(--accent);color:#05070d;font-weight:900}
+.signup{display:flex;align-items:center;justify-content:center;gap:13px;width:100%;padding:13px 10px;border-radius:10px;text-decoration:none;color:#fff;font-size:18px;font-weight:950;background:var(--button);box-shadow:0 7px 18px color-mix(in srgb,var(--accent) 30%,transparent);transition:.18s}
+.signup:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.arrow{font-size:25px;line-height:0}
+.url{display:block;text-align:center;color:#8f9bad;font-size:10px;margin-top:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+
+.c1{--accent:#ff2d2d;--button:linear-gradient(135deg,#ff1616,#b90000)}
+.c2{--accent:#19baff;--button:linear-gradient(135deg,#149eff,#0876bd)}
+.c3{--accent:#ffc72c;--button:linear-gradient(135deg,#ffc800,#d88a00)}
+.c4{--accent:#ffb619;--button:linear-gradient(135deg,#ffbd19,#d98200)}
+.c5{--accent:#ff9f16;--button:linear-gradient(135deg,#ff9f16,#e26c00)}
+.c6{--accent:#c43cff;--button:linear-gradient(135deg,#a523ff,#6d00bd)}
+.c7{--accent:#18d7ef;--button:linear-gradient(135deg,#0ccde5,#008aa5)}
+.c8{--accent:#ff4141;--button:linear-gradient(135deg,#ff3048,#d60021)}
+
+.support{margin:25px 0 10px;border:1px solid rgba(173,59,255,.4);border-radius:14px;background:linear-gradient(100deg,#17102a,#0c101d);padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.support strong{font-size:18px}.support span{display:block;color:#8995a8;font-size:12px;margin-top:2px}
+.telegram{display:inline-block;text-decoration:none;color:#fff;background:linear-gradient(135deg,#a822ff,#6d0fd0);padding:12px 20px;border-radius:10px;font-weight:900;white-space:nowrap}
+footer{text-align:center;color:#657185;font-size:12px;padding:20px 0 28px}
+
+@media(max-width:980px){.grid{grid-template-columns:repeat(2,1fr)}.highlights{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){
+ .wrap{padding:0 9px}.head{align-items:flex-start}.brand h1{font-size:20px}.brand p{font-size:10px}.brand-icon{width:40px;height:40px;font-size:21px}.lang button{padding:8px 10px}
+ .nav{width:34px;height:34px;font-size:24px}.highlights{grid-template-columns:1fr 1fr;gap:7px}.highlight{padding:9px}.highlight b{font-size:11px}.highlight span{font-size:9px}.hicon{width:32px;height:32px;flex-basis:32px;font-size:14px}
+ .grid{grid-template-columns:1fr 1fr;gap:9px}.card{padding:9px;border-radius:13px}.logo-box{height:68px}.logo-box img{width:130px;height:48px}.rate{font-size:30px}.commission-label{font-size:10px}.features{font-size:10px;line-height:1.65;margin-bottom:9px}.features li:before{width:14px;height:14px}.signup{font-size:15px;padding:10px 5px}.arrow{font-size:20px}.url{font-size:8px}.support{flex-direction:column;align-items:stretch;text-align:center}.telegram{width:100%;text-align:center}
+}
+@media(max-width:380px){.grid{grid-template-columns:1fr}.highlights{grid-template-columns:1fr}}
+
+.logo-slider-wrap{margin:16px 0 22px;border:1px solid rgba(120,80,255,.35);border-radius:15px;background:linear-gradient(135deg,rgba(19,15,34,.96),rgba(7,11,20,.96));padding:10px 0 13px;overflow:hidden;box-shadow:0 12px 30px rgba(0,0,0,.25)}
+.logo-slider-title{text-align:center;color:#d8c8ff;font-size:13px;font-weight:900;margin:0 0 8px;letter-spacing:.4px}
+.logo-marquee{overflow:hidden;position:relative}
+.logo-marquee:before,.logo-marquee:after{content:"";position:absolute;top:0;bottom:0;width:55px;z-index:2;pointer-events:none}
+.logo-marquee:before{left:0;background:linear-gradient(90deg,#100d18,transparent)}
+.logo-marquee:after{right:0;background:linear-gradient(270deg,#100d18,transparent)}
+.logo-track{display:flex;width:max-content;gap:12px;animation:logoMove 28s linear infinite}
+.logo-item{width:145px;height:58px;flex:0 0 145px;border:1px solid rgba(255,255,255,.12);border-radius:10px;background:linear-gradient(145deg,#151922,#080a10);display:flex;align-items:center;justify-content:center;padding:5px 9px;box-shadow:inset 0 0 18px rgba(255,255,255,.025)}
+.logo-item img{width:100%;height:48px;object-fit:contain;display:block}
+.logo-marquee:hover .logo-track{animation-play-state:paused}
+@keyframes logoMove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(max-width:620px){.logo-slider-wrap{margin:11px 0 16px}.logo-slider-title{font-size:11px}.logo-track{gap:8px;animation-duration:22s}.logo-item{width:112px;height:48px;flex-basis:112px;padding:4px 7px}.logo-item img{height:39px}.logo-marquee:before,.logo-marquee:after{width:30px}}
+
+.contact-section{margin:28px 0 12px;padding:20px;border:1px solid rgba(161,63,255,.45);border-radius:17px;background:linear-gradient(135deg,rgba(25,12,43,.98),rgba(8,12,21,.98));box-shadow:0 12px 35px rgba(0,0,0,.28)}
+.contact-heading{text-align:center;font-size:25px;font-weight:950;color:#fff0b4;margin-bottom:16px}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.contact-card{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:12px;text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.12);background:linear-gradient(145deg,#151827,#090c14);transition:.2s}
+.contact-card:hover{transform:translateY(-3px);border-color:#a93cff;box-shadow:0 10px 25px rgba(130,25,255,.2)}
+.contact-icon{width:42px;height:42px;flex:0 0 42px;border-radius:12px;display:grid;place-items:center;font-size:22px;font-weight:950;background:linear-gradient(135deg,#9d20ff,#5d08bd)}
+.facebook-card .contact-icon{background:linear-gradient(135deg,#2374ff,#1244a8)}
+.contact-card b{display:block;font-size:14px}.contact-card small{display:block;color:#8995a8;font-size:11px;margin-top:3px}
+.tg-float{position:fixed;right:18px;bottom:18px;z-index:9999;display:flex;align-items:center;gap:10px;padding:10px 15px 10px 10px;border-radius:15px;text-decoration:none;color:#fff;background:linear-gradient(135deg,#1f9cf0,#0877c9);border:1px solid rgba(255,255,255,.22);box-shadow:0 10px 30px rgba(0,120,220,.4);animation:tgPulse 2.2s ease-in-out infinite}
+.tg-float-icon{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:rgba(255,255,255,.16);font-size:22px}
+.tg-float-text b{display:block;font-size:13px}.tg-float-text small{display:block;font-size:10px;margin-top:2px;opacity:.88}
+@keyframes tgPulse{0%,100%{transform:translateY(0);box-shadow:0 10px 30px rgba(0,120,220,.4)}50%{transform:translateY(-4px);box-shadow:0 14px 35px rgba(0,150,255,.58)}}
+@media(max-width:700px){.contact-section{padding:14px}.contact-heading{font-size:20px}.contact-grid{grid-template-columns:1fr}.contact-card{padding:12px}.tg-float{right:10px;bottom:10px;padding:8px 11px 8px 8px}.tg-float-icon{width:37px;height:37px}.tg-float-text b{font-size:11px}.tg-float-text small{font-size:9px}}
+
+.app-logo{width:44px;height:44px;flex:0 0 44px;border-radius:13px;display:grid;place-items:center;font-size:23px;font-weight:950;color:#fff}
+.telegram-logo{background:linear-gradient(135deg,#28a9f2,#0879c9);box-shadow:0 5px 15px rgba(0,145,230,.28)}
+.facebook-logo{background:linear-gradient(135deg,#2878f0,#1249ad);font-family:Arial,sans-serif}
+
+.telegram-logo img{width:100%;height:100%;object-fit:contain;border-radius:13px;display:block}
+.tg-float-icon img{width:100%;height:100%;object-fit:contain;border-radius:12px;display:block}
+
+.slider{position:relative;overflow:hidden;width:100%}
+.slider .slides{display:flex;width:100%;will-change:transform}
+.slider .slide{flex:0 0 100%;width:100%;min-width:100%}
+.slider .slide img{display:block;width:100%;height:auto}
+.slider .dot{cursor:pointer}
+
+.slider{position:relative;overflow:hidden;width:100%}
+.slider .slides{display:flex;width:100%;will-change:transform}
+.slider .slide{flex:0 0 100%;width:100%;min-width:100%;line-height:0}
+.slider .slide img{display:block;width:100%;height:auto}
+.slider .dots{display:flex}
+.slider .dot{cursor:pointer}
+
+.card .url,.card .link,.card .signup-link,.card .signup-url,
+.card .affiliate-url,.card .site-url,.card .site-link,
+.card .card-url,.card .card-link{display:none!important}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap head">
+  <div class="brand">
+    <div class="brand-icon">♛</div>
+    <div><h1 id="brandTitle">সেরা অ্যাফিলিয়েট সাইটসমূহ</h1><p id="brandSub">আপনার পছন্দের সাইট নির্বাচন করে সাইন আপ করুন</p></div>
+  </div>
+  <div class="lang"><button id="bn" class="active">বাংলা</button><button id="en">English</button></div>
+</div>
+</header>
+
+<main class="wrap">
+<section class="slider">
+ <div class="slides" id="slides">
+  <div class="slide"><img src="assets/banner-1.webp" alt="HeyBaji banner" fetchpriority="high"></div>
+  <div class="slide"><img src="assets/banner-2.webp" alt="Superbaji banner" loading="lazy"></div>
+  <div class="slide"><img src="assets/banner-3.webp" alt="JeetWin banner" loading="lazy"></div>
+  <div class="slide"><img src="assets/banner-4.webp" alt="KV8 banner" loading="lazy"></div>
+  <div class="slide"><img src="assets/banner-5.webp" alt="JeetBangla banner" loading="lazy"></div>
+  <div class="slide"><img src="assets/banner-6.webp" alt="BDVegas banner" loading="lazy"></div>
+  <div class="slide"><img src="assets/banner-7.webp" alt="CPC88 banner" loading="lazy"></div>
+  <div class="slide"><img src="assets/banner-8.webp" alt="DESHI777 banner" loading="lazy"></div>
+ </div>
+ <button class="nav prev" aria-label="Previous">‹</button><button class="nav next" aria-label="Next">›</button>
+ <div class="dots" id="dots"></div>
+</section>
+
+<section class="logo-slider-wrap" aria-label="Affiliate logos">
+  <div class="logo-slider-title">সেরা অ্যাফিলিয়েট পার্টনার</div>
+  <div class="logo-marquee">
+    <div class="logo-track" id="logoTrack">
+      <div class="logo-item"><img src="assets/logos/superbaji.png" alt="Superbaji"></div>
+      <div class="logo-item"><img src="assets/logos/heybaji.png" alt="HeyBaji"></div>
+      <div class="logo-item"><img src="assets/logos/jeetwin.png" alt="JeetWin"></div>
+      <div class="logo-item"><img src="assets/logos/kv8.png" alt="KV8"></div>
+      <div class="logo-item"><img src="assets/logos/jeetbangla.png" alt="JeetBangla"></div>
+      <div class="logo-item"><img src="assets/logos/bdvegas.png" alt="BDVegas"></div>
+      <div class="logo-item"><img src="assets/logos/cpc88.png" alt="CPC88"></div>
+      <div class="logo-item"><img src="assets/logos/deshi777.png" alt="DESHI777"></div>
+      <div class="logo-item"><img src="assets/logos/superbaji.png" alt="Superbaji"></div>
+      <div class="logo-item"><img src="assets/logos/heybaji.png" alt="HeyBaji"></div>
+      <div class="logo-item"><img src="assets/logos/jeetwin.png" alt="JeetWin"></div>
+      <div class="logo-item"><img src="assets/logos/kv8.png" alt="KV8"></div>
+      <div class="logo-item"><img src="assets/logos/jeetbangla.png" alt="JeetBangla"></div>
+      <div class="logo-item"><img src="assets/logos/bdvegas.png" alt="BDVegas"></div>
+      <div class="logo-item"><img src="assets/logos/cpc88.png" alt="CPC88"></div>
+      <div class="logo-item"><img src="assets/logos/deshi777.png" alt="DESHI777"></div>
+    </div>
+  </div>
+</section>
+
+<section class="highlights">
+ <div class="highlight"><div class="hicon">♕</div><div><b id="h1">সীমাহীন কমিশন</b><span id="hs1">লাইফটাইম আয়ের সুযোগ</span></div></div>
+ <div class="highlight"><div class="hicon">▣</div><div><b id="h2">ফাস্ট পেমেন্ট</b><span id="hs2">২৪/৭ পেমেন্ট সুবিধা</span></div></div>
+ <div class="highlight"><div class="hicon">✓</div><div><b id="h3">বিশ্বাস ও নিরাপদ</b><span id="hs3">নিরাপদ প্ল্যাটফর্ম</span></div></div>
+ 
+</section>
+
+<div class="title"><h2 id="title">সেরা ৮ অ্যাফিলিয়েট সাইট</h2><p id="subtitle">সেরা কমিশন, সেরা সুযোগ — আপনার আয়ের সেরা ঠিকানা</p></div>
+
+<section class="grid">
+<article class="card c1"><div class="logo-box"><img src="assets/logos/superbaji.png" alt="Superbaji"></div><h3>Superbaji</h3><div class="commission-label" data-bn="সীমাহীন কমিশন" data-en="Unlimited Commission">সীমাহীন কমিশন</div><div class="rate">৫৫%</div><ul class="features"><li>লাইফটাইম কমিশন</li><li>ফাস্ট পেমেন্ট</li></ul><a class="signup" href="https://superbaji.fun/saf/794YHnfl" target="_blank" rel="noopener noreferrer">SIGN UP <span class="arrow">→</span></a><span class="url">superbaji.fun/saf/794YHnfl</span></article>
+
+<article class="card c2"><div class="logo-box"><img src="assets/logos/heybaji.png" alt="HeyBaji"></div><h3>HeyBaji</h3><div class="commission-label">সীমাহীন কমিশন</div><div class="rate">৬৫%</div><ul class="features"><li>লাইফটাইম কমিশন</li><li>ফাস্ট পেমেন্ট</li></ul><a class="signup" href="https://heybaji.fun/saf/PQ4Hovz6" target="_blank" rel="noopener noreferrer">SIGN UP <span class="arrow">→</span></a><span class="url">heybaji.fun/saf/PQ4Hovz6</span></article>
+
+<article class="card c3"><div class="logo-box"><img src="assets/logos/jeetwin.png" alt="JeetWin"></div><h3>JeetWin</h3><div class="commission-label">সীমাহীন কমিশন</div><div class="rate">৫০%</div><ul class="features"><li>লাইফটাইম কমিশন</li><li>ফাস্ট পেমেন্ট</li></ul><a class="signup" href="https://jeetwinfun.com/saf/XSYcO54O" target="_blank" rel="noopener noreferrer">SIGN UP <span class="arrow">→</span></a><span class="url">jeetwinfun.com/saf/XSYcO54O</span></article>
+
+<article class="card c4"><div class="logo-box"><img src="assets/logos/kv8.png" alt="KV8"></div><h3>KV8</h3><div class="commission-label">সীমাহীন কমিশন</div><div class="rate">৫০%</div><ul class="features"><li>লাইফটাইম কমিশন</li><li>ফাস্ট পেমেন্ট</li></ul><a class="signup" href="https://kv8.club/saf/8vp38MfR" target="_blank" rel="noopener noreferrer">SIGN UP <span class="arrow">→</span></a><span class="url">kv8.club/saf/8vp38MfR</span></article>
+
+<article class="card c5"><div class="logo-box"><img src="assets/logos/jeetbangla.png" alt="JeetBangla"></div><h3>JeetBangla</h3><div class="commission-label">সীমাহীন কমিশন</div><div class="rate">৪৫%</div><ul class="features"><li>লাইফটাইম কমিশন</li><li>ফাস্ট পেমেন্ট</li></ul><a class="signup" href="https://jeetbangla.co/saf/25k6THNU" target="_blank" rel="noopener noreferrer">SIGN UP <span class="arrow">→</span></a><span class="url">jeetbangla.co/saf/25k6THNU</span></article>
+
+<article class="card c6"><div class="logo-box"><img src="assets/logos/bdvegas.png" alt="BDVegas"></div><h3>BDVegas</h3><div class="commission-label">সীমাহীন কমিশন</div><div class="rate">৬০%</div><ul class="features"><li>লাইফটাইম কমিশন</li><li>ফাস্ট পেমেন্ট</li></ul><a class="signup" href="https://bdvegas.win/saf/VwZ2ilQ2" target="_blank" rel="noopener noreferrer">SIGN UP <span class="arrow">→</span></a><span class="url">bdvegas.win/saf/VwZ2ilQ2</span></article>
+
+<article class="card c7"><div class="logo-box"><img src="assets/logos/cpc88.png" alt="CPC88"></div><h3>CPC88</h3><div class="commission-label">সীমাহীন কমিশন</div><div class="rate">৫৮%</div><ul class="features"><li>লাইফটাইম কমিশন</li><li>ফাস্ট পেমেন্ট</li></ul><a class="signup" href="https://cpc888.live/saf/6DTcl53E" target="_blank" rel="noopener noreferrer">SIGN UP <span class="arrow">→</span></a><span class="url">cpc888.live/saf/6DTcl53E</span></article>
+
+<article class="card c8"><div class="logo-box"><img src="assets/logos/deshi777.png" alt="DESHI777"></div><h3>DESHI777</h3><div class="commission-label">সীমাহীন কমিশন</div><div class="rate">৫৫%</div><ul class="features"><li>লাইফটাইম কমিশন</li><li>ফাস্ট পেমেন্ট</li></ul><a class="signup" href="https://deshi777.fun/saf/QkDbG72t" target="_blank" rel="noopener noreferrer">SIGN UP <span class="arrow">→</span></a><span class="url">deshi777.fun/saf/QkDbG72t</span></article>
+</section>
+
+<section class="support"><div><strong id="supportTitle">কোনো সাহায্য লাগলে আমাদের টেলিগ্রামে মেসেজ করুন</strong><span id="supportSub">আমাদের সাপোর্ট টিম আপনার জন্য ২৪/৭ প্রস্তুত</span></div><a class="telegram" href="#" id="telegram">TELEGRAM এ যোগ দিন</a></section>
+
+<section class="contact-section" id="contact">
+  <div class="contact-heading">আমাদের সাথে যোগাযোগ করুন</div>
+  <div class="contact-grid">
+    <a class="contact-card telegram-card" href="https://t.me/Affsupport1" target="_blank" rel="noopener noreferrer"><span class="app-logo telegram-logo"><img src="assets/telegram-logo.png" alt="Telegram"></span><span><b>Telegram Support</b><small>টেলিগ্রাম সাপোর্ট</small></span></a>
+    <a class="contact-card channel-card" href="https://t.me/MasterAgenthub" target="_blank" rel="noopener noreferrer"><span class="app-logo telegram-logo"><img src="assets/telegram-logo.png" alt="Telegram"></span><span><b>Telegram Channel</b><small>টেলিগ্রাম চ্যানেল</small></span></a>
+    <a class="contact-card facebook-card" href="https://www.facebook.com/people/Affiliate-Program-BD/61593030402184/" target="_blank" rel="noopener noreferrer"><span class="app-logo facebook-logo">f</span><span><b>Facebook</b><small>Affiliate Program BD</small></span></a>
+  </div>
+</section>
+
+<!-- Floating Telegram Support -->
+<a class="tg-float" href="https://t.me/Affsupport1" target="_blank" rel="noopener noreferrer" aria-label="Telegram Support">
+  <span class="tg-float-icon"><img src="assets/telegram-logo.png" alt="Telegram"></span>
+  <span class="tg-float-text"><b>Telegram Support</b><small>টেলিগ্রাম সাপোর্ট</small></span>
+</a>
+
+<footer>© 2026 সেরা অ্যাফিলিয়েট সাইটসমূহ। সর্বস্বত্ব সংরক্ষিত।</footer>
+</main>
+
+<script>
+(function(){
+  /* =========================
+     TOP 8 BANNER AUTO SLIDER
+     ========================= */
+  const slider = document.querySelector('.slider');
+  if(slider){
+    const track = slider.querySelector('.slides');
+    const items = Array.from(slider.querySelectorAll('.slide'));
+    const prev = slider.querySelector('.prev');
+    const next = slider.querySelector('.next');
+    const dotsWrap = slider.querySelector('.dots');
+
+    if(track && items.length > 1){
+      let index = 0;
+      let timer = null;
+      let startX = 0;
+      let dragging = false;
+
+      // Create all 8 dots automatically.
+      if(dotsWrap){
+        dotsWrap.innerHTML = '';
+        items.forEach((_, n) => {
+          const dot = document.createElement('button');
+          dot.type = 'button';
+          dot.className = 'dot' + (n === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', 'Go to banner ' + (n + 1));
+          dot.addEventListener('click', () => {
+            go(n);
+            restart();
+          });
+          dotsWrap.appendChild(dot);
+        });
+      }
+
+      const dots = () => Array.from(slider.querySelectorAll('.dot'));
+
+      function render(animate){
+        // IMPORTANT: transform percentage is relative to the wide track.
+        // Divide by item count so exactly one banner moves per step.
+        track.style.transition = animate
+          ? 'transform .65s cubic-bezier(.22,.61,.36,1)'
+          : 'none';
+        track.style.transform =
+          'translate3d(' + (-index * (100 / items.length)) + '%,0,0)';
+
+        dots().forEach((dot,n) => {
+          dot.classList.toggle('active', n === index);
+          dot.setAttribute('aria-current', n === index ? 'true' : 'false');
+        });
+      }
+
+      function go(n){
+        index = (n + items.length) % items.length;
+        render(true);
+      }
+
+      function stop(){
+        if(timer){
+          clearInterval(timer);
+          timer = null;
+        }
+      }
+
+      function start(){
+        stop();
+        timer = setInterval(() => go(index + 1), 3500);
+      }
+
+      function restart(){
+        start();
+      }
+
+      if(next) next.addEventListener('click', () => {
+        go(index + 1);
+        restart();
+      });
+
+      if(prev) prev.addEventListener('click', () => {
+        go(index - 1);
+        restart();
+      });
+
+      slider.addEventListener('mouseenter', stop);
+      slider.addEventListener('mouseleave', start);
+
+      slider.addEventListener('touchstart', e => {
+        startX = e.touches[0].clientX;
+        dragging = true;
+        stop();
+      }, {passive:true});
+
+      slider.addEventListener('touchend', e => {
+        if(!dragging) return;
+        const endX = e.changedTouches[0].clientX;
+        const diff = endX - startX;
+        if(Math.abs(diff) > 45){
+          go(diff < 0 ? index + 1 : index - 1);
+        }
+        dragging = false;
+        start();
+      }, {passive:true});
+
+      render(false);
+      start();
+    }
+  }
+
+  /* =========================
+     BANGLA / ENGLISH TOGGLE
+     ========================= */
+  const translations = {
+    bn: {
+      brandTitle: 'সেরা অ্যাফিলিয়েট সাইটসমূহ',
+      brandSub: 'আপনার পছন্দের সাইট নির্বাচন করে সাইন আপ করুন',
+      h1: 'সীমাহীন কমিশন',
+      hs1: 'লাইফটাইম আয়ের সুযোগ',
+      h2: 'ফাস্ট পেমেন্ট',
+      hs2: '২৪/৭ পেমেন্ট সুবিধা',
+      h3: 'বিশ্বাস ও নিরাপদ',
+      hs3: 'নিরাপদ প্ল্যাটফর্ম',
+      logoTitle: 'সেরা অ্যাফিলিয়েট পার্টনার',
+      title: 'সেরা ৮ অ্যাফিলিয়েট সাইট',
+      subtitle: 'সেরা কমিশন, সেরা সুযোগ — আপনার আয়ের সেরা ঠিকানা',
+      supportTitle: 'কোনো সাহায্য লাগলে আমাদের টেলিগ্রামে মেসেজ করুন',
+      supportSub: 'আমাদের সাপোর্ট টিম আপনার জন্য ২৪/৭ প্রস্তুত',
+      telegram: 'TELEGRAM এ যোগ দিন',
+      contactHeading: 'আমাদের সাথে যোগাযোগ করুন',
+      tgSupport: 'Telegram Support',
+      tgSupportBn: 'টেলিগ্রাম সাপোর্ট',
+      tgChannel: 'Telegram Channel',
+      tgChannelBn: 'টেলিগ্রাম চ্যানেল',
+      fb: 'Facebook',
+      footer: '© 2026 সেরা অ্যাফিলিয়েট সাইটসমূহ। সর্বস্বত্ব সংরক্ষিত।'
+    },
+    en: {
+      brandTitle: 'Best Affiliate Sites',
+      brandSub: 'Choose your preferred site and sign up',
+      h1: 'Unlimited Commission',
+      hs1: 'Lifetime earning opportunity',
+      h2: 'Fast Payment',
+      hs2: '24/7 payment facility',
+      h3: 'Trusted & Secure',
+      hs3: 'Secure platform',
+      logoTitle: 'Top Affiliate Partners',
+      title: 'Top 8 Affiliate Sites',
+      subtitle: 'Best commission, best opportunity — your destination for earnings',
+      supportTitle: 'Need help? Message us on Telegram',
+      supportSub: 'Our support team is ready to help you 24/7',
+      telegram: 'JOIN TELEGRAM',
+      contactHeading: 'Contact Us',
+      tgSupport: 'Telegram Support',
+      tgSupportBn: 'Message us on Telegram',
+      tgChannel: 'Telegram Channel',
+      tgChannelBn: 'Join our Telegram channel',
+      fb: 'Facebook',
+      footer: '© 2026 Best Affiliate Sites. All rights reserved.'
+    }
+  };
+
+  const setText = (id, text) => {
+    const el = document.getElementById(id);
+    if(el) el.textContent = text;
+  };
+
+  const cards = Array.from(document.querySelectorAll('.card'));
+  const cardTranslations = [
+    {bn:'সীমাহীন কমিশন',en:'Unlimited Commission'},
+    {bn:'সীমাহীন কমিশন',en:'Unlimited Commission'},
+    {bn:'সীমাহীন কমিশন',en:'Unlimited Commission'},
+    {bn:'সীমাহীন কমিশন',en:'Unlimited Commission'},
+    {bn:'সীমাহীন কমিশন',en:'Unlimited Commission'},
+    {bn:'সীমাহীন কমিশন',en:'Unlimited Commission'},
+    {bn:'সীমাহীন কমিশন',en:'Unlimited Commission'},
+    {bn:'সীমাহীন কমিশন',en:'Unlimited Commission'}
+  ];
+
+  function applyLanguage(lang){
+    const t = translations[lang];
+    if(!t) return;
+
+    setText('brandTitle', t.brandTitle);
+    setText('brandSub', t.brandSub);
+    setText('h1', t.h1);
+    setText('hs1', t.hs1);
+    setText('h2', t.h2);
+    setText('hs2', t.hs2);
+    setText('h3', t.h3);
+    setText('hs3', t.hs3);
+    setText('title', t.title);
+    setText('subtitle', t.subtitle);
+    setText('supportTitle', t.supportTitle);
+    setText('supportSub', t.supportSub);
+    setText('telegram', t.telegram);
+    setText('contactHeading', t.contactHeading);
+
+    const logoTitle = document.querySelector('.logo-slider-title');
+    if(logoTitle) logoTitle.textContent = t.logoTitle;
+
+    const contactCards = document.querySelectorAll('.contact-card');
+    if(contactCards[0]){
+      contactCards[0].querySelector('b').textContent = t.tgSupport;
+      contactCards[0].querySelector('small').textContent = t.tgSupportBn;
+    }
+    if(contactCards[1]){
+      contactCards[1].querySelector('b').textContent = t.tgChannel;
+      contactCards[1].querySelector('small').textContent = t.tgChannelBn;
+    }
+    if(contactCards[2]){
+      contactCards[2].querySelector('b').textContent = t.fb;
+      contactCards[2].querySelector('small').textContent = 'Affiliate Program BD';
+    }
+
+    const floatText = document.querySelector('.tg-float-text');
+    if(floatText){
+      floatText.querySelector('b').textContent = t.tgSupport;
+      floatText.querySelector('small').textContent =
+        lang === 'bn' ? 'টেলিগ্রাম সাপোর্ট' : 'Message us on Telegram';
+    }
+
+    cards.forEach((card, i) => {
+      const label = card.querySelector('.commission-label');
+      if(label) label.textContent = cardTranslations[i][lang];
+
+      const features = card.querySelectorAll('.features li');
+      if(features[0]) features[0].textContent =
+        lang === 'bn' ? 'লাইফটাইম কমিশন' : 'Lifetime commission';
+      if(features[1]) features[1].textContent =
+        lang === 'bn' ? 'ফাস্ট পেমেন্ট' : 'Fast payment';
+    });
+
+    document.documentElement.lang = lang === 'bn' ? 'bn' : 'en';
+    document.getElementById('bn')?.classList.toggle('active', lang === 'bn');
+    document.getElementById('en')?.classList.toggle('active', lang === 'en');
+
+    try { localStorage.setItem('siteLanguage', lang); } catch(e){}
+  }
+
+  document.getElementById('bn')?.addEventListener('click', () => applyLanguage('bn'));
+  document.getElementById('en')?.addEventListener('click', () => applyLanguage('en'));
+
+  let saved = 'bn';
+  try { saved = localStorage.getItem('siteLanguage') || 'bn'; } catch(e){}
+  applyLanguage(saved);
+})();
+</script>
+</body>
+</html>
+<style>
+.card .url,.card .link,.card .signup-link,.card .signup-url,
+.card .affiliate-url,.card .site-url,.card .site-link,
+.card .card-url,.card .card-link{display:none!important}
+</style>
